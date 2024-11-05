@@ -6,9 +6,9 @@
 #
 
 SUBTARGET:=uf-wifi6
+BOARDNAME:=en7528 based boards
 DESCRIPTION:=Ubiquiti uf-wifi6
 BOARD_CPPFLAGS += -D__UF_WIFI6__
-DEFAULT_PACKAGES += ndm-mod-interface-extras
 
 define Target/Description
 	Build firmware images for Ubiquiti UF-WIFI6

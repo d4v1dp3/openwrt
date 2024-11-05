@@ -7,7 +7,9 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk
 
-#All stuff defined in this file
-include $(TOPDIR)/target/linux/generic/image/ndm-image.mk
+define Image/Build/Initramfs
+	$(call Image/Build/$(1))
+	cp $(KDIR)/vmlinux-initramfs $(BIN_DIR)/openwrt-$(BOARD)-initramfs.bin
+endef
 
 $(eval $(call BuildImage))

@@ -9,11 +9,13 @@ include $(TOPDIR)/rules.mk
 
 ARCH:=mipsel
 BOARD:=en7528
+BOARDNAME:=EN7528 ubnt uf-wifi6
 DESCRIPTION:=EcoNet EN7528DU/EN7561DU
 FEATURES:=squashfs hwnat
 CFLAGS:=-O2 -pipe -mips32r2 -mtune=1004kc
 BOARD_CPPFLAGS:=-D__EN7528__
 KERNEL_PATCHVER:=4.9
+SUBTARGETS: uf-wifi6
 
 define Target/Description
 	Build firmware image for EN7528DU/EN7561DU based boards
